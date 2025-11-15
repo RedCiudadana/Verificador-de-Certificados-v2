@@ -4,10 +4,6 @@ import { Shield, Award, Search, CheckCircle, User, Calendar, FileText, ExternalL
 import { useCertificateStore } from '../store/certificateStore';
 import { useAuthStore } from '../store/authStore';
 import { generateCertificatePDF } from '../utils/certificateGenerator';
-import Slider from '../assets/slider/VRED-SLIDER.png';
-import Icono1 from '../assets/iconos/VRED-01.png';
-import Icono2 from '../assets/iconos/VRED-02.png';
-import Icono3 from '../assets/iconos/VRED-03.png';
 
 const PublicIndex: React.FC = () => {
   const { openLoginModal } = useAuthStore();
@@ -249,10 +245,10 @@ const PublicIndex: React.FC = () => {
 
       {/* Hero Section */}
       <div
-        className="relative overflow-hidden"
-        style={{ backgroundImage: `url(${Slider})` , backgroundSize: 'cover', backgroundPosition: 'center', height: '300px' }}
+        className="relative overflow-hidden bg-gradient-to-r from-gray-800 to-gray-900"
+        style={{ height: '300px' }}
       >
-        <div className="absolute inset-0 bg-black opacity-10"></div>
+        <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 h-full">
           <div className="text-center flex items-center justify-center h-full flex-col">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -271,7 +267,7 @@ const PublicIndex: React.FC = () => {
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
           <div className="px-6 py-6 bg-gradient-to-r from-gray-50 to-gray-50 border-b border-gray-100">
             <h3 className="text-2xl font-bold text-gray-900 flex items-center">
-              <img src={Icono2} className="mr-3 h-7 w-7 text-gray-600" />
+              <Shield className="mr-3 h-7 w-7 text-gray-600" />
               Pasos para la Verificación de Certificados
             </h3>
             <p className="text-gray-600 mt-2">Sigue estos sencillos pasos para verificar cualquier certificado</p>
@@ -317,7 +313,7 @@ const PublicIndex: React.FC = () => {
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             <div className="px-6 py-6 bg-gradient-to-r from-gray-50 to-gray-50 border-b border-gray-100">
               <h3 className="text-2xl font-bold text-gray-900 flex items-center">
-                <img src={Icono1} className="mr-3 h-7 w-7 text-gray-600" />
+                <Search className="mr-3 h-7 w-7 text-gray-600" />
                 Verificar Certificado
               </h3>
               <p className="text-gray-600 mt-2">Ingresa el ID de cualquier certificado para verificar su autenticidad</p>
@@ -406,7 +402,7 @@ const PublicIndex: React.FC = () => {
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             <div className="px-6 py-6 bg-gradient-to-r from-gray-50 to-gray-50 border-b border-gray-100">
               <h3 className="text-2xl font-bold text-gray-900 flex items-center">
-                <img src={Icono3} className="mr-3 h-7 w-7 text-gray-600" />
+                <Award className="mr-3 h-7 w-7 text-gray-600" />
                 Mis Certificados
               </h3>
               <p className="text-gray-600 mt-2">Busca tus certificados ingresando tu correo electrónico</p>
